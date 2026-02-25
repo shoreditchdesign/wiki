@@ -33,10 +33,15 @@
         gap: 0.75rem;
     }
 
+    .wb-text-block:has(> h2.wb-heading) {
+        margin-bottom: 32px;
+    }
+
     .wb-heading {
         display: flex;
         margin: 0;
         line-height: 1.2;
+        font-weight: 500;
     }
 
     :global(h2.wb-heading) {
@@ -47,11 +52,13 @@
 
     .wb-body :global(p) {
         margin: 0 0 0.85rem;
+        color: var(--color-text-secondary);
     }
 
     .wb-body :global(ul),
     .wb-body :global(ol) {
         margin: 0 0 0.85rem;
         padding-left: 1.125rem;
+        color: var(--color-text-secondary);
     }
 </style>

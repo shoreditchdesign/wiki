@@ -15,7 +15,7 @@ Blocks:
   type: b-wb-text
   id: wbch1-001
   content:
-    heading: 1 - Basics
+    heading: Basics
     heading_level: h2
     body: |
       This handbook details the information needed to maintain the website and collaborate safely in Webflow.
@@ -25,7 +25,7 @@ Blocks:
   type: b-wb-text
   id: wbch1-002
   content:
-    heading: 1.1 Introduction
+    heading: Introduction
     heading_level: h3
     body: |
       The handbook explains how Webflow works, permission levels, and content workflows for developers and editors.
@@ -35,7 +35,7 @@ Blocks:
   type: b-wb-text
   id: wbch1-003
   content:
-    heading: 1.2 Set-up
+    heading: Set-up
     heading_level: h3
     body: |
       This section introduces workspace and site-level setup.
@@ -45,8 +45,8 @@ Blocks:
   type: b-wb-text
   id: wbch1-004
   content:
-    heading: 1.2.1 Introduction
-    heading_level: h4
+    heading: Introduction
+    heading_level: h3
     body: |
       Webflow is a low-code visual development platform for building responsive websites with CMS-backed content editing.
     show_in_sidebar: "true"
@@ -55,8 +55,8 @@ Blocks:
   type: b-wb-text
   id: wbch1-005
   content:
-    heading: 1.2.2 Workspaces
-    heading_level: h4
+    heading: Workspaces
+    heading_level: h3
     body: |
       A workspace contains your sites, plans, and user access controls.
     show_in_sidebar: "true"
@@ -95,8 +95,8 @@ Blocks:
   type: b-wb-text
   id: wbch1-007
   content:
-    heading: 1.2.3 Site Settings and Access
-    heading_level: h4
+    heading: Site Settings and Access
+    heading_level: h3
     body: |
       Site Settings controls domains, SEO, backups, and access. Restrict high-risk settings to developers.
     show_in_sidebar: "true"
@@ -151,7 +151,7 @@ Blocks:
   type: b-wb-text
   id: wbch1-010
   content:
-    heading: 1.3 Designer vs Editor
+    heading: Designer vs Editor
     heading_level: h3
     body: |
       Use Editor for content updates. Use Designer only for structure and styling changes.

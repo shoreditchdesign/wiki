@@ -60,19 +60,26 @@
 
   .wb-table-title {
     margin: 0;
+    font-weight: 500;
   }
 
   .wb-table-rows {
     display: grid;
-    gap: 0.75rem;
+    gap: 0;
+    background: #fff;
+    outline: 1px solid var(--color-border);
+    outline-offset: -1px;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .wb-table-row {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
+    outline: 1px solid var(--color-border);
+    outline-offset: -1px;
+    border-radius: 0;
     padding: 0.75rem;
   }
 
@@ -112,9 +119,9 @@
     padding-left: 1rem;
   }
 
-  .tone-info { border-color: #9ac1ff; }
-  .tone-warning { border-color: #f3c46f; }
-  .tone-danger { border-color: #ee8f8f; }
+  .tone-info { outline-color: #9ac1ff; }
+  .tone-warning { outline-color: #f3c46f; }
+  .tone-danger { outline-color: #ee8f8f; }
 
   @media (max-width: 860px) {
     .wb-table-row.split {

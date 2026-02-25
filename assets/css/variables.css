@@ -24,8 +24,10 @@
 
 :root {
     --color-bg: #fafaf7;
-    --color-text: #1a1a16;
-    --color-muted: #6c6b63;
+    --color-text-primary: #0f1014;
+    --color-text-secondary: #828a9d;
+    --color-text: var(--color-text-primary);
+    --color-muted: var(--color-text-secondary);
     --color-border: #d9d7cd;
     --color-secondary-1: #58574f;
     --color-secondary-2: #7c7a70;

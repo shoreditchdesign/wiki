@@ -24,6 +24,7 @@
 
     .wb-callout h4 {
         margin: 0 0 0.5rem;
+        font-weight: 500;
     }
 
     .wb-callout-body :global(p) {

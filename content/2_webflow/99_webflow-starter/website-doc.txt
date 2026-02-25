@@ -15,7 +15,7 @@ Blocks:
   type: b-wb-text
   id: wbstarter-001
   content:
-    heading: 1 - Chapter Heading
+    heading: Chapter Heading
     heading_level: h2
     body: |
       Replace this intro copy with your chapter summary.
@@ -25,7 +25,7 @@ Blocks:
   type: b-wb-text
   id: wbstarter-002
   content:
-    heading: 1.1 Subsection
+    heading: Subsection
     heading_level: h3
     body: |
       Add subsection body copy here.

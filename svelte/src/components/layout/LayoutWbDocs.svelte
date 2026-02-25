@@ -198,13 +198,6 @@
     </aside>
 
     <article class="wb-content">
-        <header class="wb-doc-header">
-            <h1>{pageTitle}</h1>
-            {#if pageDescription}
-                <div class="description">{@html pageDescription}</div>
-            {/if}
-        </header>
-
         <div class="wb-block-stack">
             {#each model.blocks as block}
                 {#if block.type === "b-wb-text"}
@@ -249,23 +242,26 @@
     .wb-docs {
         display: grid;
         grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
-        gap: 2rem;
+        gap: 4rem;
     }
 
     .wb-sidebar {
         position: sticky;
         top: 1rem;
         align-self: start;
-        padding: 0.5rem 0;
+        padding: 0.75rem;
         max-height: calc(100vh - 2rem);
         overflow: auto;
+        background: #fff;
+        border: 1px dashed var(--color-border);
+        border-radius: 2px;
     }
 
     .wb-sidebar-title {
         margin: 0 0 0.5rem;
         color: var(--color-muted);
-        font-size: 0.85rem;
-        font-weight: 600;
+        font-size: 0.75rem;
+        font-weight: 400;
     }
 
     .wb-sidebar ul {
@@ -273,16 +269,17 @@
         padding: 0;
         margin: 0;
         display: grid;
-        gap: 0.25rem;
+        gap: 0;
     }
 
     .wb-sidebar li a {
         display: block;
         text-decoration: none;
         color: inherit;
-        font-size: 0.875rem;
-        padding: 0.2rem 0.25rem;
-        border-radius: 0.375rem;
+        font-size: 0.8125rem;
+        line-height: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0;
         transition:
             color 120ms ease,
             background-color 120ms ease;
@@ -295,50 +292,59 @@
     .wb-sidebar li.depth-2 a {
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        font-size: 0.78rem;
-        font-weight: 700;
+        font-size: 0.75rem;
+        font-weight: 400;
         color: var(--color-text);
-        margin-top: 0.35rem;
+        padding: 1.25rem 0.25rem;
+    }
+
+    .wb-sidebar li.depth-2 a.active {
+        color: var(--color-text);
+        background: transparent;
     }
 
     .wb-sidebar li.depth-3,
     .wb-sidebar li.depth-4 {
-        margin-left: 0.8rem;
-    }
-
-    .wb-sidebar li.depth-3::before,
-    .wb-sidebar li.depth-4::before {
-        content: "";
-        position: absolute;
-        left: -0.45rem;
-        top: 0.2rem;
-        bottom: 0.2rem;
-        width: 1px;
-        background: var(--color-border);
+        margin-left: 0;
     }
 
     .wb-sidebar li.depth-3 a {
         color: var(--color-secondary-1);
+        padding-left: 1.25rem;
     }
 
     .wb-sidebar li.depth-4 a {
         color: var(--color-secondary-2);
-        margin-left: 0.65rem;
+        padding: 0.75rem;
+        margin: 0 1.125rem;
+        border-left: 2px solid rgba(230, 230, 230, 0.25);
     }
 
     .wb-sidebar li a.active {
-        color: var(--color-accent);
-        background: #eef2ff;
+        color: #fc6f54;
+        background: #fff6f4;
+    }
+
+    .wb-sidebar li.depth-4 a.active {
+        border-left-color: transparent;
+    }
+
+    .wb-sidebar li.depth-3 {
+        border-left: 2px solid #e6e6e6;
+    }
+
+    .wb-sidebar li.depth-4 {
+        border-left: 2px solid #e6e6e6;
+    }
+
+    .wb-sidebar li:has(> a.active) {
+        border-left-color: #fc6f54;
     }
 
     .wb-content {
         min-width: 0;
         display: grid;
-        gap: 1.5rem;
-    }
-
-    .wb-doc-header h1 {
-        margin: 0;
+        gap: 128px;
     }
 
     .description :global(p) {
@@ -348,7 +354,7 @@
 
     .wb-block-stack {
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     @media (max-width: 980px) {
