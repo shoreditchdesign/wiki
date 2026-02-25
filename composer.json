@@ -1,0 +1,16 @@
+{
+  "name": "shoreditchdesign/wiki",
+  "description": "Kirby + Svelte documentation site scaffold",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "getkirby/cms": "^5.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  }
+}

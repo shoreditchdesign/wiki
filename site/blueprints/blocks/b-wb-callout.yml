@@ -1,0 +1,28 @@
+name: WB Callout
+icon: info
+preview: fields
+
+fields:
+  variant:
+    type: select
+    label: Variant
+    default: info
+    options:
+      info: Info
+      success: Success
+      warning: Warning
+      danger: Danger
+
+  title:
+    type: text
+    label: Title
+
+  body:
+    type: writer
+    label: Body
+    marks:
+      - bold
+      - italic
+      - link
+      - ul
+      - ol

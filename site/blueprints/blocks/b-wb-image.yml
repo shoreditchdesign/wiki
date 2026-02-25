@@ -1,0 +1,38 @@
+name: WB Image
+icon: image
+preview: image
+
+fields:
+  image:
+    type: files
+    label: Image
+    max: 1
+    required: true
+    uploads:
+      template: image
+
+  alt:
+    type: text
+    label: Alt Text
+
+  caption:
+    type: text
+    label: Caption
+
+  fit:
+    type: select
+    label: Fit
+    default: contain
+    options:
+      contain: Contain
+      cover: Cover
+
+  max_width:
+    type: select
+    label: Max Width
+    default: lg
+    options:
+      sm: Small
+      md: Medium
+      lg: Large
+      full: Full

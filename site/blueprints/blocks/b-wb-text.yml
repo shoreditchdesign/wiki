@@ -1,0 +1,40 @@
+name: WB Text
+icon: text
+preview: fields
+
+fields:
+  heading:
+    type: text
+    label: Heading
+
+  heading_level:
+    type: select
+    label: Heading Level
+    default: h3
+    options:
+      h2: H2
+      h3: H3
+      h4: H4
+
+  body:
+    type: writer
+    label: Body
+    marks:
+      - bold
+      - italic
+      - link
+      - ul
+      - ol
+
+  show_in_sidebar:
+    type: toggle
+    label: Show In Sidebar
+    default: true
+    text:
+      - "No"
+      - "Yes"
+
+  anchor_id:
+    type: slug
+    label: Anchor Id Override
+    help: Optional. Leave empty to auto-generate.

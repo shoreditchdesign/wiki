@@ -1,0 +1,27 @@
+name: WB Divider
+icon: minus
+preview: fields
+
+fields:
+  style:
+    type: select
+    label: Style
+    default: line
+    options:
+      line: Line
+      space: Space
+      line-label: Line With Label
+
+  label:
+    type: text
+    label: Label
+    help: Only used by "line-label".
+
+  spacing:
+    type: select
+    label: Spacing
+    default: md
+    options:
+      sm: Small
+      md: Medium
+      lg: Large

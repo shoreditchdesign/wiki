@@ -1,0 +1,9 @@
+Title: Shoreditch Design Wiki
+
+----
+
+Site-description: Internal documentation and brand guidelines.
+
+----
+
+Uuid: site-seed

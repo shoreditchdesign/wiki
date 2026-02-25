@@ -1,0 +1,13 @@
+Title: Home
+
+----
+
+Page-heading: Shoreditch Design Wiki
+
+----
+
+Page-intro: Welcome. This scaffold is ready for your page and block specs.
+
+----
+
+Uuid: home-seed

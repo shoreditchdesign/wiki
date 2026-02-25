@@ -1,0 +1,18 @@
+title: Site
+
+sections:
+  pages:
+    type: pages
+    templates:
+      - home
+      - webflow
+      - default
+  drafts:
+    type: pages
+    status: draft
+  content:
+    type: fields
+    fields:
+      site_description:
+        type: textarea
+        label: Site Description

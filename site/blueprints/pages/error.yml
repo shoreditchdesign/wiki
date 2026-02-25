@@ -1,0 +1,20 @@
+title: Error
+
+options:
+  changeSlug: false
+  delete: false
+
+sections:
+  content:
+    type: fields
+    fields:
+      page_heading:
+        type: text
+        label: Heading
+      body:
+        type: writer
+        label: Body
+        marks:
+          - bold
+          - italic
+          - link

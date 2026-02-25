@@ -1,0 +1,7 @@
+title: Image
+accept:
+  extension: jpg, jpeg, png, gif, webp, avif, svg
+fields:
+  alt:
+    type: text
+    label: Alt Text

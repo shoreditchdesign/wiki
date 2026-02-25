@@ -1,0 +1,38 @@
+title: Default Page
+
+columns:
+  - width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          page_heading:
+            type: writer
+            label: Heading
+            marks:
+              - italic
+              - bold
+          body:
+            type: writer
+            label: Body
+            marks:
+              - bold
+              - italic
+              - link
+          blocks:
+            type: blocks
+            label: Content Blocks
+            fieldsets: []
+
+  - width: 1/3
+    sticky: true
+    sections:
+      seo:
+        type: fields
+        label: SEO
+        fields:
+          meta_title:
+            type: text
+          meta_description:
+            type: textarea
+            maxlength: 160

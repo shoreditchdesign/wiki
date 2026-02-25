@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Inter Display";
+    src: url("/assets/fonts/InterDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("/assets/fonts/InterDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter Display";
+    src: url("/assets/fonts/InterDisplay-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-bg: #fafaf7;
+    --color-text: #1a1a16;
+    --color-muted: #6c6b63;
+    --color-border: #d9d7cd;
+    --color-secondary-1: #58574f;
+    --color-secondary-2: #7c7a70;
+    --color-accent: #2d5bff;
+    --radius-base: 0.5rem;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --content-max: 64rem;
+    --font-sans:
+        "Inter Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

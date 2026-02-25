@@ -1,0 +1,51 @@
+name: WB Table
+icon: dashboard
+preview: fields
+
+fields:
+  title:
+    type: text
+    label: Title
+
+  rows:
+    type: structure
+    label: Rows
+    min: 1
+    fields:
+      image:
+        type: files
+        label: Image
+        max: 1
+        uploads:
+          template: image
+      image_alt:
+        type: text
+        label: Image Alt
+      text:
+        type: writer
+        label: Text
+        marks:
+          - bold
+          - italic
+          - link
+          - ul
+          - ol
+      layout:
+        type: select
+        label: Layout
+        default: image-left
+        options:
+          image-left: Image Left
+          image-right: Image Right
+      caption:
+        type: text
+        label: Caption
+      row_callout_variant:
+        type: select
+        label: Row Accent
+        default: none
+        options:
+          none: None
+          info: Info
+          warning: Warning
+          danger: Danger
