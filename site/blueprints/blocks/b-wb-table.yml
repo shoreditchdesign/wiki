@@ -7,6 +7,28 @@ fields:
     type: text
     label: Title
 
+  title_heading_level:
+    type: select
+    label: Title Heading Level
+    default: h3
+    options:
+      h2: H2
+      h3: H3
+      h4: H4
+
+  title_show_in_sidebar:
+    type: toggle
+    label: Show Title In Sidebar
+    default: false
+    text:
+      - "No"
+      - "Yes"
+
+  title_anchor_id:
+    type: slug
+    label: Title Anchor Id Override
+    help: Optional. Leave empty to auto-generate.
+
   rows:
     type: structure
     label: Rows
@@ -18,6 +40,9 @@ fields:
         max: 1
         uploads:
           template: image
+      image_caption:
+        type: text
+        label: Image Caption
       row_title:
         type: text
         label: Title

@@ -1,0 +1,14 @@
+title: Globals
+
+options:
+  changeSlug: false
+  delete: false
+
+sections:
+  shared_sources:
+    type: pages
+    label: Source Pages
+    templates:
+      - doc-master
+    create:
+      - doc-master

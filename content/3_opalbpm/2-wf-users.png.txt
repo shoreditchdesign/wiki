@@ -1,9 +1,0 @@
-Alt: 
-
-----
-
-Uuid: 8rvqx80ihqreykaj
-
-----
-
-Template: image

@@ -1,0 +1,5 @@
+Title: Globals
+
+----
+
+Uuid: globals-root-seed

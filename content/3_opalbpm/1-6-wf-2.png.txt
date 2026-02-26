@@ -1,9 +1,0 @@
-Alt: 
-
-----
-
-Uuid: kicufeuh3oqzairk
-
-----
-
-Template: image

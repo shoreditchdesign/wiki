@@ -1,0 +1,14 @@
+title: Handbooks
+
+options:
+  changeSlug: false
+  delete: false
+
+sections:
+  clients:
+    type: pages
+    label: Handbook Pages
+    templates:
+      - doc-client
+    create:
+      - doc-client

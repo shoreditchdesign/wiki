@@ -5,11 +5,28 @@ sections:
     type: pages
     templates:
       - home
-      - webflow
+      - globals
+      - webflow-index
       - default
+
+  globals:
+    type: pages
+    label: Globals
+    parent: site.find("global")
+    templates:
+      - doc-master
+
+  handbooks:
+    type: pages
+    label: Handbooks
+    parent: site.find("sites")
+    templates:
+      - doc-client
+
   drafts:
     type: pages
     status: draft
+
   content:
     type: fields
     fields:

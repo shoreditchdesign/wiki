@@ -2,6 +2,7 @@
   interface TableRow {
     image?: string;
     imageAlt?: string;
+    imageCaption?: string;
     title?: string;
     headingLevel?: 'h2' | 'h3' | 'h4' | string;
     anchor?: string;
@@ -9,9 +10,14 @@
     layout?: 'image-left' | 'image-right' | string;
   }
 
-  let { title = '', rows = [] as TableRow[] } = $props();
+  let {
+    title = '',
+    titleHeadingLevel = 'h3',
+    titleAnchor = '',
+    rows = [] as TableRow[],
+  } = $props();
 
-  function getRowLevel(level?: string): string {
+  function getHeadingLevel(level?: string): string {
     return level === 'h2' || level === 'h4' ? level : 'h3';
   }
 
@@ -26,7 +32,13 @@
 
 <section class="wb-table-block">
   {#if title}
-    <h3 class="wb-table-title">{title}</h3>
+    <svelte:element
+      this={getHeadingLevel(titleHeadingLevel)}
+      id={titleAnchor || undefined}
+      class="wb-table-title"
+    >
+      {title}
+    </svelte:element>
   {/if}
 
   <div class="wb-table-rows">
@@ -37,7 +49,12 @@
         <article class={`wb-table-row ${rowClass(row)}`}>
           {#if hasImage}
             <div class="wb-cell wb-cell-image">
-              <img src={row.image} alt={row.imageAlt || ''} loading="lazy" />
+              <figure class="wb-image-figure">
+                <img src={row.image} alt={row.imageAlt || ''} loading="lazy" />
+                {#if row.imageCaption}
+                  <figcaption>{row.imageCaption}</figcaption>
+                {/if}
+              </figure>
             </div>
           {/if}
 
@@ -46,7 +63,7 @@
               <div class="wb-cell-stack">
                 {#if row.title}
                   <svelte:element
-                    this={getRowLevel(row.headingLevel)}
+                    this={getHeadingLevel(row.headingLevel)}
                     id={row.anchor || undefined}
                     class="wb-row-title"
                   >
@@ -116,6 +133,19 @@
     height: auto;
     border-radius: 2px;
     border: 0;
+  }
+
+  .wb-image-figure {
+    margin: 0;
+    display: grid;
+    gap: 0;
+  }
+
+  .wb-image-figure figcaption {
+    margin: 16px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
   }
 
   .wb-cell-text {

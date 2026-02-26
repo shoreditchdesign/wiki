@@ -119,6 +119,31 @@
         for (const block of source) {
             if (block.type !== "b-wb-text") {
                 if (block.type === "b-wb-table") {
+                    const tableTitle = String(block.data?.title || "").trim();
+                    const titleShowInSidebar = Boolean(
+                        block.data?.titleShowInSidebar ?? false,
+                    );
+
+                    const {
+                        anchor: tableAnchor,
+                        safeLevel: tableSafeLevel,
+                    } = applyHeadingMeta(
+                        tableTitle,
+                        String(block.data?.titleHeadingLevel || "h3"),
+                        String(block.data?.titleAnchorId || "").trim(),
+                        block.id,
+                        counters,
+                    );
+
+                    if (tableTitle && titleShowInSidebar) {
+                        sidebar.push({
+                            id: `${block.id}-title`,
+                            anchor: tableAnchor,
+                            depth: tableSafeLevel,
+                            title: tableTitle,
+                        });
+                    }
+
                     const rows = Array.isArray(block.data?.rows)
                         ? block.data.rows
                         : [];
@@ -155,6 +180,8 @@
                         ...block,
                         data: {
                             ...block.data,
+                            titleHeadingLevel: `h${tableSafeLevel}`,
+                            titleAnchor: tableAnchor,
                             rows: mappedRows,
                         },
                     });
@@ -275,6 +302,10 @@
                             {:else if block.type === "b-wb-table"}
                                 <BlockWbTable
                                     title={block.data.title}
+                                    titleHeadingLevel={
+                                        block.data.titleHeadingLevel
+                                    }
+                                    titleAnchor={block.data.titleAnchor}
                                     rows={block.data.rows || []}
                                 />
                             {:else if block.type === "b-wb-callout"}
