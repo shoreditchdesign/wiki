@@ -33,3 +33,17 @@ sections:
       site_description:
         type: textarea
         label: Site Description
+      opengraph_image:
+        type: files
+        label: OpenGraph Image
+        max: 1
+        uploads:
+          template: site-image
+        query: site.files.template("site-image")
+      favicon:
+        type: files
+        label: Favicon
+        max: 1
+        uploads:
+          template: site-image
+        query: site.files.template("site-image")

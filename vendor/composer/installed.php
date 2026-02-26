@@ -3,7 +3,7 @@
         'name' => 'shoreditchdesign/wiki',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4e78c8f5c05aee5f2cc433430d05539907860202',
+        'reference' => '70db398ace7050e798a401bbd15df34a338ccd2f',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -118,7 +118,7 @@
         'shoreditchdesign/wiki' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4e78c8f5c05aee5f2cc433430d05539907860202',
+            'reference' => '70db398ace7050e798a401bbd15df34a338ccd2f',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

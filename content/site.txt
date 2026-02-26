@@ -6,4 +6,16 @@ Site-description: Internal documentation and brand guidelines.
 
 ----
 
+Opengraph-image:
+
+- opengraph.png
+
+----
+
+Favicon:
+
+- favicon.png
+
+----
+
 Uuid: site-seed
