@@ -1,0 +1,9 @@
+Alt: 
+
+----
+
+Uuid: do77bucc7scoc9wn
+
+----
+
+Template: image

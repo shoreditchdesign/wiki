@@ -39,12 +39,9 @@ Blocks:
     rows: |
       -
         image:
-        image_alt:
         text: |
           Add your first step explanation here.
         layout: image-left
-        caption:
-        row_callout_variant: none
 -
   type: b-wb-callout
   id: wbstarter-004

@@ -1,6 +1,4 @@
 <?php snippet("head"); ?>
-<?php snippet("header"); ?>
-
 <?php
 $serializedBlocks = [];
 foreach ($page->blocks()->toBlocks() as $block) {
@@ -25,17 +23,12 @@ foreach ($page->blocks()->toBlocks() as $block) {
             $imageFile = $row->image()->toFile();
             $rows[] = [
                 "image" => $imageFile?->url() ?? "",
-                "imageAlt" => $row
-                    ->image_alt()
-                    ->or($imageFile?->alt())
-                    ->value(),
+                "imageAlt" => $imageFile?->alt()->value() ?? "",
+                "title" => $row->row_title()->value(),
+                "headingLevel" => $row->heading_level()->or("h3")->value(),
+                "showInSidebar" => $row->show_in_sidebar()->toBool(),
                 "text" => (string) $row->text()->kt(),
                 "layout" => $row->layout()->or("image-left")->value(),
-                "caption" => $row->caption()->value(),
-                "rowCalloutVariant" => $row
-                    ->row_callout_variant()
-                    ->or("none")
-                    ->value(),
             ];
         }
         $serializedBlocks[] = [
@@ -99,7 +92,6 @@ $id = "webflow-doc-" . $page->id();
       <?= json_encode($props, JSON_UNESCAPED_SLASHES) ?>
     </script>
   </main>
-  <?php snippet("footer"); ?>
 </div>
 
 <?php snippet("scripts"); ?>

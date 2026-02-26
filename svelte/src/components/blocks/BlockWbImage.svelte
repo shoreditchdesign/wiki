@@ -38,23 +38,23 @@
     }
 
     .wb-image-sm {
-        max-width: 32rem;
+        max-width: none;
     }
     .wb-image-md {
-        max-width: 44rem;
+        max-width: none;
     }
     .wb-image-lg {
-        max-width: 56rem;
+        max-width: none;
     }
     .wb-image-full {
-        max-width: 100%;
+        max-width: none;
     }
 
     .wb-image img {
         width: 100%;
         max-height: 34rem;
         border: 1px solid var(--color-border);
-        border-radius: 0.5rem;
+        border-radius: 4px;
         background: #fff;
     }
 
@@ -68,5 +68,7 @@
     figcaption {
         font-size: 0.85rem;
         color: var(--color-muted);
+        text-align: center;
+        font-style: italic;
     }
 </style>

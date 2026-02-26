@@ -18,9 +18,9 @@ fields:
         max: 1
         uploads:
           template: image
-      image_alt:
+      row_title:
         type: text
-        label: Image Alt
+        label: Title
       text:
         type: writer
         label: Text
@@ -30,6 +30,21 @@ fields:
           - link
           - ul
           - ol
+      heading_level:
+        type: select
+        label: Heading Level
+        default: h3
+        options:
+          h2: H2
+          h3: H3
+          h4: H4
+      show_in_sidebar:
+        type: toggle
+        label: Show In Sidebar
+        default: false
+        text:
+          - "No"
+          - "Yes"
       layout:
         type: select
         label: Layout
@@ -37,15 +52,3 @@ fields:
         options:
           image-left: Image Left
           image-right: Image Right
-      caption:
-        type: text
-        label: Caption
-      row_callout_variant:
-        type: select
-        label: Row Accent
-        default: none
-        options:
-          none: None
-          info: Info
-          warning: Warning
-          danger: Danger

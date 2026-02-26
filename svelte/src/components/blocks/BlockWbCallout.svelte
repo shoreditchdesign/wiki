@@ -19,7 +19,7 @@
     .wb-callout {
         border: 1px solid transparent;
         border-radius: var(--radius-base);
-        padding: 0.75rem 0.875rem;
+        padding: 1.25rem 0.875rem;
     }
 
     .wb-callout h4 {
@@ -28,7 +28,8 @@
     }
 
     .wb-callout-body :global(p) {
-        margin: 0 0 0.75rem;
+        margin: 0;
+        opacity: 0.6;
     }
 
     .wb-callout-info {

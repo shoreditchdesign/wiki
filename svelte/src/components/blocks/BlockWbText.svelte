@@ -51,7 +51,7 @@
     }
 
     .wb-body :global(p) {
-        margin: 0 0 0.85rem;
+        margin: 0;
         color: var(--color-text-secondary);
     }
 

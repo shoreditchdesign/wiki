@@ -69,28 +69,19 @@ Blocks:
     rows: |
       -
         image:
-        image_alt:
         text: |
           Your Webflow account has a Workspace where all sites live. You can host multiple sites and manage plans at workspace level.
         layout: image-left
-        caption:
-        row_callout_variant: none
       -
         image:
-        image_alt:
         text: |
           Use Users and Teams to manage collaboration and permission levels for designers, admins, and editors.
         layout: image-left
-        caption:
-        row_callout_variant: none
       -
         image:
-        image_alt:
         text: |
           Use Plans and Billing to review or change plans as project requirements evolve.
         layout: image-left
-        caption:
-        row_callout_variant: none
 -
   type: b-wb-text
   id: wbch1-007
@@ -117,36 +108,24 @@ Blocks:
     rows: |
       -
         image:
-        image_alt:
         text: |
           1. Go to the Site Access panel.
         layout: image-left
-        caption:
-        row_callout_variant: info
       -
         image:
-        image_alt:
         text: |
           2. Add all accounts from workspace members.
         layout: image-left
-        caption:
-        row_callout_variant: info
       -
         image:
-        image_alt:
         text: |
           3. Assign permissions. Keep one master admin account and one developer design account.
         layout: image-left
-        caption:
-        row_callout_variant: info
       -
         image:
-        image_alt:
         text: |
           4. Add remaining members as content editors.
         layout: image-left
-        caption:
-        row_callout_variant: info
 -
   type: b-wb-text
   id: wbch1-010

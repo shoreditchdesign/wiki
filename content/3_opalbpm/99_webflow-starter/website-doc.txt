@@ -1,0 +1,68 @@
+Title: Webflow Starter (Duplicate Me)
+
+----
+
+Doc-title: [Template] Webflow Chapter Starter
+
+----
+
+Doc-description: Duplicate this page in the Panel to start a new chapter with default block structure.
+
+----
+
+Blocks:
+
+-
+  type: b-wb-text
+  id: wbstarter-001
+  content:
+    heading: Chapter Heading
+    heading_level: h2
+    body: |
+      Replace this intro copy with your chapter summary.
+    show_in_sidebar: "true"
+    anchor_id:
+-
+  type: b-wb-text
+  id: wbstarter-002
+  content:
+    heading: Subsection
+    heading_level: h3
+    body: |
+      Add subsection body copy here.
+    show_in_sidebar: "true"
+    anchor_id:
+-
+  type: b-wb-table
+  id: wbstarter-003
+  content:
+    title: Section walkthrough
+    rows: |
+      -
+        image:
+        text: |
+          Add your first step explanation here.
+        layout: image-left
+-
+  type: b-wb-callout
+  id: wbstarter-004
+  content:
+    variant: info
+    title: Note
+    body: |
+      Use callouts for warnings, tips, and required constraints.
+-
+  type: b-wb-divider
+  id: wbstarter-005
+  content:
+    style: line
+    label:
+    spacing: md
+
+----
+
+Sidebar-sticky: true
+
+----
+
+Uuid: byr3jcq6mgsbkvtj
